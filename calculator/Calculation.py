@@ -16,5 +16,5 @@ class Calculation:
     def createCalculation(a: Decimal, b: Decimal, operation: Callable[[Decimal,Decimal],Decimal]):
         return Calculation(a, b, operation)
     
-    def __repr__(self):
+    def __string_repr__(self):
         return f"Calculation({self.a}, {self.b}, {self.operation.__name__})"
