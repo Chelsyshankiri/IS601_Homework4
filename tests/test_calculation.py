@@ -8,7 +8,7 @@ from calculator.Calculation import Calculation
 from calculator.operations import add,subtract,multiply,divide
 
 
-@pytest.mark.parametrize("a, b, operation, expected",
+@pytest.mark.parametrize("value1, value2, operation, expected",
 [
     (Decimal('2'), Decimal('3'), add, Decimal('5')),
     (Decimal('5'), Decimal('3'), subtract, Decimal('2')),
@@ -18,9 +18,9 @@ from calculator.operations import add,subtract,multiply,divide
 ]
 )
 
-def test_calculate(a: Decimal, b: Decimal, operation, expected):
+def test_calculate(value1: Decimal, value2: Decimal, operation, expected):
     ''' Test Calculation object computes correct results for the operations. '''
-    obj = Calculation(a, b, operation)
+    obj = Calculation(value1, value2, operation)
     assert obj.calculate() == expected, f"Operation {operation.__name__} has been failed!!"
 
 def test_repr():

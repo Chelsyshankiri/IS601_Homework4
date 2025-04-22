@@ -7,8 +7,8 @@ from typing import Callable
 class Calculator:
 
     @staticmethod
-    def do_operation(a: Decimal, b: Decimal, operation: Callable[[Decimal,Decimal], Decimal]):
-        calculation = Calculation.createCalculation(a, b, operation)
+    def do_operation(value1: Decimal, value2: Decimal, operation: Callable[[Decimal,Decimal], Decimal]):
+        calculation = Calculation.createCalculation(value1, value2, operation)
         Calculationhistory.add_history(calculation)
         return calculation.calculate()
     
