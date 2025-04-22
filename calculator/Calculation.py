@@ -1,10 +1,20 @@
+from decimal import Decimal
+from typing import Callable
+from calculator.operations import add, subtract, multiply, divide
+
 class Calculation:
     result = None
-    def __init__(self, x, y, operation):
-        self.x = x
-        self.y = y
+    def __init__(self, a: Decimal, b: Decimal, operation: Callable[[Decimal, Decimal], Decimal]):
+        self.a = a
+        self.b = b
         self.operation = operation
 
-    def get_result(self):
-        self.result = self.operation(self.x, self.y)
-        return self.result
+    def calculate(self) -> Decimal:
+        return self.operation(self.a, self.b)
+
+    @staticmethod
+    def createCalculation(a: Decimal, b: Decimal, operation: Callable[[Decimal,Decimal],Decimal]):
+        return Calculation(a, b, operation)
+    
+    def __repr__(self):
+        return f"Calculation({self.a}, {self.b}, {self.operation.__name__})"
