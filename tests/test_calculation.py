@@ -7,7 +7,7 @@ import pytest
 from calculator.Calculation import Calculation
 from calculator.operations import add,subtract,multiply,divide
 
-''' The pytest.mark.parametrize is a decorator used to run the same test function multiple times with different sets of input parameters and expected outputs '''
+
 @pytest.mark.parametrize("value1, value2, operation, expected",
 [
     (Decimal('2'), Decimal('3'), add, Decimal('5')), # Addition : 2 + 3 = 5
