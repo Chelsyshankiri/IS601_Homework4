@@ -25,7 +25,6 @@ def generate_test_data(num_records):
         operation_name = fake.random_element(elements=list(operation_mappings.keys()))
         operation_func = operation_mappings[operation_name]
 
-        # ✅ Corrected: compare string to string
         if operation_name == 'divide':
             b = Decimal('1') if b == Decimal('0') else b
 
