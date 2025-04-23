@@ -1,33 +1,41 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.12.3, pytest-8.0.0, pluggy-1.4.0 -- /home/samuel/IS601_Again/Homework3/calculator_3_levels/venv/bin/python3
+platform linux -- Python 3.12.3, pytest-8.3.3, pluggy-1.5.0 -- /home/samuel/IS601_Again/Homework4/IS601_Homework3/venv/bin/python3.12
 cachedir: .pytest_cache
-rootdir: /home/samuel/IS601_Again/Homework3/calculator_3_levels
+rootdir: /home/samuel/IS601_Again/Homework4/IS601_Homework3
 configfile: pytest.ini
 testpaths: tests
-plugins: pylint-0.21.0, cov-4.1.0
-collecting ... collected 22 items
+plugins: Faker-30.0.0, cov-5.0.0, pylint-0.21.0
+collecting ... collected 30 items
 
-tests/test_calculation.py::test_calculate[value10-value20-add-expected0] PASSED [  4%]
-tests/test_calculation.py::test_calculate[value11-value21-subtract-expected1] PASSED [  9%]
-tests/test_calculation.py::test_calculate[value12-value22-divide-expected2] PASSED [ 13%]
-tests/test_calculation.py::test_calculate[value13-value23-multiply-expected3] PASSED [ 18%]
-tests/test_calculation.py::test_calculate[value14-value24-add-expected4] PASSED [ 22%]
-tests/test_calculation.py::test_repr PASSED                              [ 27%]
-tests/test_calculation.py::test_dividebyzero PASSED                      [ 31%]
-tests/test_calculations.py::test_addcalculation PASSED                   [ 36%]
-tests/test_calculations.py::test_gethistory PASSED                       [ 40%]
-tests/test_calculations.py::test_clearhistory PASSED                     [ 45%]
-tests/test_calculations.py::test_getlatest PASSED                        [ 50%]
-tests/test_calculations.py::test_getlatestafterclear PASSED              [ 54%]
-tests/test_calculations.py::test_findbyoperation PASSED                  [ 59%]
-tests/test_calculator.py::test_add PASSED                                [ 63%]
-tests/test_calculator.py::test_subtract PASSED                           [ 68%]
-tests/test_calculator.py::test_multiply PASSED                           [ 72%]
-tests/test_calculator.py::test_divide PASSED                             [ 77%]
-tests/test_calculator.py::test_dividebyzero PASSED                       [ 81%]
-tests/test_operations.py::test_addition PASSED                           [ 86%]
-tests/test_operations.py::test_subtraction PASSED                        [ 90%]
-tests/test_operations.py::test_multiplication PASSED                     [ 95%]
+tests/test_calculation.py::test_calculate[a0-b0-subtract-expected0] PASSED [  3%]
+tests/test_calculation.py::test_calculate[a1-b1-subtract-expected1] PASSED [  6%]
+tests/test_calculation.py::test_calculate[a2-b2-multiply-expected2] PASSED [ 10%]
+tests/test_calculation.py::test_calculate[a3-b3-divide-expected3] PASSED [ 13%]
+tests/test_calculation.py::test_calculate[a4-b4-subtract-expected4] PASSED [ 16%]
+tests/test_calculation.py::test_repr PASSED                              [ 20%]
+tests/test_calculation.py::test_dividebyzero PASSED                      [ 23%]
+tests/test_calculations.py::test_addcalculation PASSED                   [ 26%]
+tests/test_calculations.py::test_gethistory PASSED                       [ 30%]
+tests/test_calculations.py::test_clearhistory PASSED                     [ 33%]
+tests/test_calculations.py::test_getlatest PASSED                        [ 36%]
+tests/test_calculations.py::test_getlatestafterclear PASSED              [ 40%]
+tests/test_calculations.py::test_findbyoperation PASSED                  [ 43%]
+tests/test_calculator.py::test_add PASSED                                [ 46%]
+tests/test_calculator.py::test_subtract PASSED                           [ 50%]
+tests/test_calculator.py::test_multiply PASSED                           [ 53%]
+tests/test_calculator.py::test_divide PASSED                             [ 56%]
+tests/test_calculator.py::test_dividebyzero PASSED                       [ 60%]
+tests/test_main.py::test_calculate_and_print[5-3-add-The result of 5 add 3 is equal to 8] PASSED [ 63%]
+tests/test_main.py::test_calculate_and_print[10-2-subtract-The result of 10 subtract 2 is equal to 8] PASSED [ 66%]
+tests/test_main.py::test_calculate_and_print[4-5-multiply-The result of 4 multiply 5 is equal to 20] PASSED [ 70%]
+tests/test_main.py::test_calculate_and_print[20-4-divide-The result of 20 divide 4 is equal to 5] PASSED [ 73%]
+tests/test_main.py::test_calculate_and_print[1-0-divide-An error occurred: Division By Zero is not allowed!] PASSED [ 76%]
+tests/test_main.py::test_calculate_and_print[9-3-unknown-Unknown operation: unknown] PASSED [ 80%]
+tests/test_main.py::test_calculate_and_print[a-3-add-Invalid number input: a or 3 is not a valid number.] PASSED [ 83%]
+tests/test_main.py::test_calculate_and_print[5-b-subtract-Invalid number input: 5 or b is not a valid number.] PASSED [ 86%]
+tests/test_operations.py::test_addition PASSED                           [ 90%]
+tests/test_operations.py::test_subtraction PASSED                        [ 93%]
+tests/test_operations.py::test_multiplication PASSED                     [ 96%]
 tests/test_operations.py::test_division PASSED                           [100%]
 
-============================== 22 passed in 0.02s ==============================
+============================== 30 passed in 0.04s ==============================
